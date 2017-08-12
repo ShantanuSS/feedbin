@@ -1,0 +1,4 @@
+create DEFINER=root@localhost PROCEDURE sp_GetWish(IN p_title varchar(50),p_your_text varchar(5000) )
+BEGIN insert into t1 (title,your_text,date) values(p_title,p_your_text, NOW() );
+
+C:\Users\TOSHIBA\.cargo\bin;C:\Users\TOSHIBA\AppData\Roaming\npm
