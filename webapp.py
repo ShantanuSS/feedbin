@@ -52,13 +52,10 @@ def addText():
         if session.get('logged_in'):
             _title = request.form['inputTitle']
             _description = request.form['inputDescription']
-            #_user = 'admin'
             db = mysql.connector.connect(user='root', password='root', database='pyth')
             cursor = db.cursor(buffered=True)
             cursor.callproc('sp_GetWish',(_title,_description))
             data=cursor.fetchall()
-            #for data in db.next_result():
-             #   pass
             if len(data) is 0:
                 db.commit()
                 return redirect('/login')
