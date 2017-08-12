@@ -64,11 +64,6 @@ def addText():
         else:
             return render_template('quithere.html',error='Wrong address')
     except Exception as e:
-        #error = str(e)
-        #if error=='No result set to fetch from.':
-          #  pass
-        #else:
-         #   db.commit()
         return render_template('quithere.html', error=str(e))
     finally:
         cursor.close()
