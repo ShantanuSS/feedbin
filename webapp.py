@@ -52,7 +52,7 @@ def addText():
         if session.get('logged_in'):
             _title = request.form['inputTitle']
             _description = request.form['inputDescription']
-            db = mysql.connector.connect(user='root', password='root', database='pyth')
+            db = mysql.connector.connect(user='root', password='', database='')  #type your username if different from 'root' and then type password and name of database you are working on
             cursor = db.cursor(buffered=True)
             cursor.callproc('sp_GetWish',(_title,_description))
             data=cursor.fetchall()
