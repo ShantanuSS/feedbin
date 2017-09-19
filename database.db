@@ -1,4 +1,15 @@
-CREATE TABLE `feedbin`.`tbl_user` (
+From the command line: 
+type,
+
+>>mysql -u <username> -p
+
+Enter the password now and when logged in, Create the Database:
+
+>>CREATE DATABASE BucketList;
+
+Once the database has been created, create  a table:
+
+>>CREATE TABLE `feedbin`.`tableuser` (
   `user_id` BIGINT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(45) NULL,
   `user_username` VARCHAR(45) NULL,
